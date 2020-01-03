@@ -19,3 +19,10 @@ In previous projects, you used a bash file to set up local environment variables
 If you're following along in the project, use `touch setup.sh` and set up all of your environment variables in that file.
 
 Most of the work we do for Heroku will be in our application files or the command line. In order to give you some familiarity with the web interface, we'll set up the environment variables there, after we deploy our application. For now, check out the screenshot below to get used to the interface. Once you're in a project's settings, you'll see an option to Reveal Config Vars. Once you click on that, a table similar to that you see below will appear. Here, you define your variables just as you did in the setup.sh file, just without the equals signs!
+
+## Gunicorn
+Gunicorn is a pure-Python HTTP server for WSGI applications. We'll be deploying our applications using the Gunicorn webserver.
+
+First, we need to install gunicorn using `pip install gunicorn`. Next touch Procfile to create the file.
+
+Procfile is exceedingly simple. It only needs to include one line to instruct Heroku correctly for us: `web: gunicorn app:app`. Just make sure your app is housed in app.py as it is in the project.
