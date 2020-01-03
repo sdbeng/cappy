@@ -28,3 +28,13 @@ Gunicorn is a pure-Python HTTP server for WSGI applications. We'll be deploying 
 First, we need to install gunicorn using `pip install gunicorn`. Next touch Procfile to create the file.
 
 Procfile is exceedingly simple. It only needs to include one line to instruct Heroku correctly for us: `web: gunicorn app:app`. Just make sure your app is housed in app.py as it is in the project.
+
+## Database Manage & Migrations on Heroku
+In the data modeling course, you learned how to use migrations to manage your database schema and changes that you make to it. Heroku can run all your migrations to the database you have hosted on the platform, but in order to do so, your application needs to include a manage.py file.
+
+We'll need three new packages in the file. Run the following commands to install them:
+```
+pip install flask_script
+pip install flask_migrate
+pip install psycopg2-binary
+```
