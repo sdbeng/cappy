@@ -1,7 +1,7 @@
 # cappy endpoints
 ` / and /coolkids`
 
-## save dependencies
+## Save/freeze dependencies to requirements.txt
 
 In order to save our package requirements we'll use the following command:
 ```
@@ -12,3 +12,10 @@ Pip freezing is a process in which pip reads versions of all packages in the cur
 Be advised: the requirements.txt file does not automatically update if you install a new library. It's like a snapshot - any changes after aren't reflected in a past snapshot. You'll want to ensure requirements.txt is up to date before pushing your app to Heroku.
 
 If you want to learn more about pip, check out this segment of Websauna documentation.[https://websauna.org/docs/tutorials/deployment/freeze.html]
+
+## Environment Configuration
+In previous projects, you used a bash file to set up local environment variables. You'll do the same here. We want them all contained in the same kind of file for easier transfer later to the Heroku interface.
+
+If you're following along in the project, use `touch setup.sh` and set up all of your environment variables in that file.
+
+Most of the work we do for Heroku will be in our application files or the command line. In order to give you some familiarity with the web interface, we'll set up the environment variables there, after we deploy our application. For now, check out the screenshot below to get used to the interface. Once you're in a project's settings, you'll see an option to Reveal Config Vars. Once you click on that, a table similar to that you see below will appear. Here, you define your variables just as you did in the setup.sh file, just without the equals signs!
