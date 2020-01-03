@@ -13,6 +13,8 @@ Be advised: the requirements.txt file does not automatically update if you insta
 
 If you want to learn more about pip, check out this segment of Websauna documentation.[https://websauna.org/docs/tutorials/deployment/freeze.html]
 
+** Make sure you run `pip freeze > requirements.txt` after each time you install or update a package.**
+
 ## Environment Configuration
 In previous projects, you used a bash file to set up local environment variables. You'll do the same here. We want them all contained in the same kind of file for easier transfer later to the Heroku interface.
 
