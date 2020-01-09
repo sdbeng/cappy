@@ -38,3 +38,16 @@ pip install flask_script
 pip install flask_migrate
 pip install psycopg2-binary
 ```
+
+## run migrations
+local migrations once
+```
+python manage.py db init
+python manage.py db migrate
+python manage.py db upgrade
+```
+
+then:
+```
+heroku run python manage.py db upgrade --app name_of_your_application
+```
